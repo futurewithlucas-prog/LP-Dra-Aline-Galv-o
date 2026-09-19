@@ -3,24 +3,26 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Dini Balões — Decoração de Festas</title>
-<meta name="description" content="Painéis, arcos desconstruídos e cenários completos para aniversários, chás revelação e 15 anos. Montagem e desmontagem inclusas. Orçamento pelo WhatsApp." />
-<meta name="theme-color" content="#2A1B2E" />
+<title>Line Balões — Decoração de Festas em São Paulo</title>
+<meta name="description" content="Decoração com balões, painéis instagramáveis e arranjos florais em São Paulo. Festas, eventos corporativos e surpresas em casa. Montagem inclusa. Orçamento pelo WhatsApp." />
+<meta name="theme-color" content="#241826" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Dini Balões — Decoração de Festas" />
-<meta property="og:description" content="A gente monta, você só aparece nas fotos. Orçamento pelo WhatsApp." />
+<meta property="og:title" content="Line Balões — Decoração de Festas em São Paulo" />
+<meta property="og:description" content="A gente monta, você só aparece nas fotos. Orçamento no WhatsApp." />
+<meta property="og:image" content="img/foto-8.jpg" />
 
 <!--
 =====================================================================
-  DINI BALÕES · landing page
-  Para publicar: edite APENAS o bloco CONFIG no final do arquivo
-  (WhatsApp, Instagram, cidade, prazos) e troque as fotos nos
-  elementos marcados com  data-slot="foto".
-  Tudo que estiver com a tarja "substituir" é conteúdo de exemplo.
+  LINE BALÕES · landing page
+  Jaguaré — São Paulo, SP  ·  @linebaloes84
+  Para ajustar: edite APENAS o bloco CONFIG no final do arquivo.
+  O que ainda estiver com a tarja roxa "confirmar" precisa do ok
+  da cliente antes de publicar. Suma com as tarjas: PUBLICADO = true
 =====================================================================
 -->
 
+<link rel="icon" type="image/jpeg" href="img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -48,8 +50,9 @@
   --sobre-escuro-2:#C4AEC9;
   --linha-escura:#463150;
 
+  --wa:#25D366;
   --btn-texto:#FFFFFF;
-  --sombra:0 18px 40px -22px rgba(42,27,46,.5);
+  --sombra:0 18px 44px -22px rgba(42,27,46,.55);
 
   --fonte-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
   --fonte-corpo:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
@@ -63,7 +66,7 @@
     --fundo:#1B1220; --fundo-2:#241828; --fundo-3:#2E1F34;
     --linha:#3E2B46;
     --escuro:#150E1A; --escuro-2:#241828; --linha-escura:#3E2B46;
-    --sombra:0 18px 40px -22px rgba(0,0,0,.75);
+    --sombra:0 18px 44px -22px rgba(0,0,0,.8);
   }
 }
 :root[data-theme="dark"]{
@@ -71,7 +74,7 @@
   --fundo:#1B1220; --fundo-2:#241828; --fundo-3:#2E1F34;
   --linha:#3E2B46;
   --escuro:#150E1A; --escuro-2:#241828; --linha-escura:#3E2B46;
-  --sombra:0 18px 40px -22px rgba(0,0,0,.75);
+  --sombra:0 18px 44px -22px rgba(0,0,0,.8);
 }
 
 *{box-sizing:border-box}
@@ -83,22 +86,25 @@ body{
 }
 img{max-width:100%; display:block}
 a{color:inherit}
-h1,h2,h3{font-family:var(--fonte-display); text-wrap:balance; margin:0; line-height:1.05; letter-spacing:-.02em}
+h1,h2,h3{font-family:var(--fonte-display); text-wrap:balance; margin:0; line-height:1.06; letter-spacing:-.02em}
 p{margin:0}
 
 .wrap{width:100%; max-width:var(--limite); margin-inline:auto; padding-inline:20px}
 .secao{padding-block:clamp(56px,8vw,104px)}
 .secao--escura{background:var(--escuro); color:var(--sobre-escuro)}
-.secao--escura h2{color:var(--sobre-escuro)}
+.secao--escura h2,.secao--escura h3{color:var(--sobre-escuro)}
 .secao--alt{background:var(--fundo-3)}
 
 .olho{
   font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
   color:var(--confete-rosa); display:flex; align-items:center; gap:10px; margin-bottom:14px;
 }
-.olho::before{content:""; width:26px; height:3px; border-radius:3px; background:var(--confete-sol)}
+.olho::before{content:""; width:26px; height:3px; border-radius:3px; background:var(--confete-sol); flex:none}
 .secao--escura .olho{color:var(--confete-sol)}
 .secao--escura .olho::before{background:var(--confete-rosa)}
+.centro{text-align:center}
+.centro .olho{justify-content:center}
+.centro .sub{margin-inline:auto}
 
 h2{font-size:clamp(28px,4.4vw,46px); font-weight:800}
 .sub{color:var(--tinta-3); max-width:60ch; margin-top:16px; font-size:clamp(16px,1.7vw,19px)}
@@ -111,17 +117,20 @@ h2{font-size:clamp(28px,4.4vw,46px); font-weight:800}
   padding:15px 26px; border-radius:999px; border:0; cursor:pointer;
   text-decoration:none; transition:transform .16s ease, box-shadow .16s ease, background .16s ease;
 }
-.btn--zap{background:var(--confete-rosa); color:var(--btn-texto); box-shadow:0 12px 26px -12px rgba(232,54,93,.85)}
-.btn--zap:hover{transform:translateY(-2px); box-shadow:0 18px 34px -12px rgba(232,54,93,.9)}
+.btn--zap{background:var(--wa); color:#04301A; box-shadow:0 12px 26px -12px rgba(37,211,102,.8)}
+.btn--zap:hover{background:#1FBB5A; transform:translateY(-2px)}
+.btn--rosa{background:var(--confete-rosa); color:var(--btn-texto); box-shadow:0 12px 26px -12px rgba(232,54,93,.85)}
+.btn--rosa:hover{transform:translateY(-2px)}
 .btn--linha{background:transparent; color:var(--tinta); border:2px solid var(--linha)}
 .btn--linha:hover{border-color:var(--confete-rosa); color:var(--confete-rosa)}
 .secao--escura .btn--linha{color:var(--sobre-escuro); border-color:var(--linha-escura)}
 .secao--escura .btn--linha:hover{border-color:var(--confete-sol); color:var(--confete-sol)}
-.btn--claro{background:var(--confete-sol); color:#3A2408}
-.btn--claro:hover{transform:translateY(-2px)}
+.btn--p{padding:11px 20px; font-size:14.5px}
 .btn:focus-visible, a:focus-visible, summary:focus-visible{outline:3px solid var(--confete-menta); outline-offset:3px}
+.micro{font-size:13.5px; color:var(--tinta-3); margin-top:14px}
+.secao--escura .micro{color:var(--sobre-escuro-2)}
 
-/* ---------- aviso de preview ---------- */
+/* ---------- barra de preview ---------- */
 .preview-bar{
   background:repeating-linear-gradient(135deg,#2A1B2E 0 14px,#3A2540 14px 28px);
   color:#FFE9C7; font-size:13.5px; padding:10px 20px;
@@ -133,260 +142,229 @@ h2{font-size:clamp(28px,4.4vw,46px); font-weight:800}
   border-radius:999px; padding:4px 12px; font:inherit; font-size:12px; cursor:pointer;
 }
 
+/* ---------- faixa de agenda ---------- */
+.agenda{background:var(--escuro); color:#F7E9EF; font-size:14px; text-align:center; padding:9px 20px; font-weight:500}
+.agenda b{color:var(--confete-sol)}
+
 /* ---------- topo ---------- */
 .topo{
   position:sticky; top:env(safe-area-inset-top,0px); z-index:50;
-  background:color-mix(in srgb,var(--fundo) 88%,transparent);
+  background:color-mix(in srgb,var(--fundo) 90%,transparent);
   backdrop-filter:blur(12px); border-bottom:1px solid var(--linha);
 }
-.topo__in{display:flex; align-items:center; gap:18px; padding-block:12px}
+.topo__in{display:flex; align-items:center; gap:18px; padding-block:11px}
 .marca{display:flex; align-items:center; gap:11px; text-decoration:none; font-family:var(--fonte-display); font-weight:800; font-size:20px; letter-spacing:-.02em}
-.marca small{display:block; font-family:var(--fonte-corpo); font-weight:500; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--tinta-3)}
+.marca img{width:42px; height:42px; border-radius:50%; object-fit:cover; flex:none; box-shadow:0 4px 12px -4px rgba(42,27,46,.4)}
+.marca small{display:block; font-family:var(--fonte-corpo); font-weight:500; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--tinta-3)}
 .nav{margin-left:auto; display:flex; gap:24px; align-items:center}
 .nav a{text-decoration:none; font-size:14.5px; font-weight:600; color:var(--tinta-2)}
 .nav a:hover{color:var(--confete-rosa)}
-@media (max-width:900px){ .nav{display:none} }
-.topo .btn{padding:11px 20px; font-size:14.5px}
-@media (max-width:560px){ .topo .btn span{display:none} }
+@media (max-width:940px){ .nav{display:none} }
+@media (max-width:560px){ .topo .btn span{display:none} .marca span small{display:none} }
 
 /* ---------- hero ---------- */
-.hero{position:relative; overflow:hidden; background:var(--fundo)}
-.hero__grade{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,5vw,64px); align-items:center; padding-block:clamp(44px,6vw,80px)}
+.hero{position:relative; overflow:hidden;
+  background:
+    radial-gradient(760px 460px at 92% 6%, rgba(232,54,93,.11) 0%, transparent 62%),
+    radial-gradient(620px 420px at 2% 94%, rgba(255,178,63,.13) 0%, transparent 62%),
+    var(--fundo);
+}
+.hero__grade{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,5vw,60px); align-items:center; padding-block:clamp(40px,6vw,76px)}
 @media (max-width:920px){ .hero__grade{grid-template-columns:1fr} }
-.hero h1{font-size:clamp(35px,5.6vw,63px); font-weight:800}
+.hero h1{font-size:clamp(34px,5.4vw,60px); font-weight:800}
 .hero h1 em{font-style:normal; color:var(--confete-rosa); position:relative; white-space:nowrap}
 .hero h1 em::after{
   content:""; position:absolute; left:0; right:0; bottom:.06em; height:.22em;
-  background:var(--confete-sol); opacity:.42; border-radius:999px; z-index:-1;
+  background:var(--confete-sol); opacity:.4; border-radius:999px; z-index:-1;
 }
-.hero__acoes{display:flex; gap:12px; flex-wrap:wrap; margin-top:30px}
-.selos{display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:26px; font-size:14px; color:var(--tinta-2); font-weight:600}
+.pilulas{display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 0; padding:0; list-style:none}
+.pilulas li{background:var(--fundo-2); border:1px solid var(--linha); border-radius:999px; padding:7px 15px; font-size:13.5px; font-weight:600; color:var(--tinta-2)}
+.hero__acoes{display:flex; gap:12px; flex-wrap:wrap; margin-top:26px}
+.selos{display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:24px; padding-top:20px; border-top:1px solid var(--linha); font-size:14px; color:var(--tinta-2); font-weight:600}
 .selos span{display:flex; align-items:center; gap:7px}
 .selos svg{flex:none}
 
-/* ---------- arco de balões (svg) ---------- */
-.arco{width:100%; height:auto; overflow:visible}
-@media (prefers-reduced-motion:no-preference){
-  .arco .bal{animation:flutua 5.5s ease-in-out infinite; transform-origin:center}
-  .arco .bal:nth-child(2n){animation-duration:6.8s; animation-delay:-1.4s}
-  .arco .bal:nth-child(3n){animation-duration:7.6s; animation-delay:-2.7s}
+.hero__arte{position:relative}
+.hero__arte img{border-radius:24px; box-shadow:var(--sombra); object-fit:cover; width:100%; height:auto; aspect-ratio:4/5; max-width:100%}
+.hero__cracha{
+  position:absolute; left:-8px; bottom:24px; background:var(--fundo-2);
+  border:1px solid var(--linha); border-radius:16px; padding:14px 17px;
+  box-shadow:var(--sombra); font-size:13.5px; font-weight:700; color:var(--tinta); max-width:235px;
 }
-@keyframes flutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-
-/* ---------- faixa de números ---------- */
-.faixa{background:var(--escuro); color:var(--sobre-escuro)}
-.faixa__in{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; padding-block:34px}
-@media (max-width:760px){ .faixa__in{grid-template-columns:repeat(2,1fr); gap:26px} }
-.num{text-align:center}
-.num b{display:block; font-family:var(--fonte-display); font-weight:800; font-size:clamp(28px,4vw,40px); color:var(--confete-sol); letter-spacing:-.03em; font-variant-numeric:tabular-nums}
-.num span{font-size:13px; color:var(--sobre-escuro-2); letter-spacing:.04em}
+.hero__cracha small{display:block; color:var(--tinta-3); font-weight:500; font-size:12.5px; margin-top:3px}
 
 /* ---------- dores ---------- */
-.dores{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:38px}
-@media (max-width:760px){ .dores{grid-template-columns:1fr} }
-.dor{
-  display:flex; gap:14px; align-items:flex-start;
-  background:var(--fundo-2); border:1px solid var(--linha); border-radius:14px; padding:20px 22px;
-}
-.dor svg{flex:none; margin-top:2px}
-.dor p{font-size:16px; color:var(--tinta-2)}
+.dores{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:38px}
+@media (max-width:960px){ .dores{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:560px){ .dores{grid-template-columns:1fr} }
+.dor{background:var(--escuro-2); border:1px solid var(--linha-escura); border-radius:14px; padding:22px 20px}
+.dor svg{margin-bottom:12px}
+.dor h3{font-size:16.5px; font-weight:700; margin-bottom:7px}
+.dor p{font-size:14.5px; color:var(--sobre-escuro-2)}
 
-/* ---------- passos (sequência real) ---------- */
-.passos{display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:44px; counter-reset:p}
-@media (max-width:820px){ .passos{grid-template-columns:1fr} }
-.passo{position:relative; padding:0 26px; border-left:2px dashed var(--linha-escura)}
+/* ---------- linhas de serviço ---------- */
+.cartoes{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:44px}
+@media (max-width:960px){ .cartoes{grid-template-columns:1fr; max-width:520px; margin-inline:auto} }
+.cartao{
+  background:var(--fundo-2); border:1px solid var(--linha); border-radius:var(--raio);
+  overflow:hidden; display:flex; flex-direction:column; box-shadow:0 10px 30px -24px rgba(42,27,46,.6);
+}
+.cartao img{width:100%; height:auto; aspect-ratio:3/2; object-fit:cover}
+.cartao__c{padding:22px 22px 24px; display:flex; flex-direction:column; flex:1; gap:10px}
+.etiqueta{
+  align-self:flex-start; background:var(--cor,var(--confete-rosa)); color:#fff;
+  font-size:10.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  padding:5px 11px; border-radius:999px;
+}
+.cartao h3{font-size:20px; font-weight:700}
+.cartao p{font-size:15px; color:var(--tinta-3)}
+.cartao ul{margin:0; padding:0; list-style:none; display:grid; gap:9px; font-size:14.5px; color:var(--tinta-2)}
+.cartao li{display:flex; gap:9px; align-items:flex-start}
+.cartao li svg{flex:none; margin-top:4px}
+.cartao .btn{margin-top:auto; align-self:flex-start}
+
+/* ---------- galeria ---------- */
+.mosaico{columns:2; column-gap:14px; margin-top:44px}
+@media (min-width:760px){ .mosaico{columns:3; column-gap:18px} }
+.mosaico figure{margin:0 0 14px; break-inside:avoid; position:relative; border-radius:14px; overflow:hidden; box-shadow:0 10px 26px -20px rgba(42,27,46,.7)}
+@media (min-width:760px){ .mosaico figure{margin-bottom:18px} }
+.mosaico img{width:100%; height:auto}
+.mosaico figcaption{
+  position:absolute; left:0; right:0; bottom:0; padding:26px 14px 12px;
+  background:linear-gradient(to top,rgba(36,24,38,.92),transparent);
+  color:#F6EAEF; font-size:13px; font-weight:600; line-height:1.35;
+}
+
+/* ---------- passos ---------- */
+.passos{display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:44px}
+@media (max-width:900px){ .passos{grid-template-columns:repeat(2,1fr); gap:28px 0} }
+@media (max-width:560px){ .passos{grid-template-columns:1fr} }
+.passo{position:relative; padding:0 24px; border-left:2px dashed var(--linha)}
 .passo:first-child{padding-left:0; border-left:0}
-@media (max-width:820px){ .passo{border-left:0; padding:0 0 30px 0} }
+@media (max-width:900px){ .passo:nth-child(3){padding-left:0; border-left:0} }
+@media (max-width:560px){ .passo{border-left:0; padding:0} }
 .passo__n{
   font-family:var(--fonte-display); font-weight:800; font-size:14px;
   width:38px; height:38px; border-radius:50%; display:grid; place-items:center;
-  background:var(--confete-rosa); color:#fff; margin-bottom:16px;
+  background:var(--confete-rosa); color:#fff; margin-bottom:15px;
 }
 .passo:nth-child(2) .passo__n{background:var(--confete-sol); color:#3A2408}
 .passo:nth-child(3) .passo__n{background:var(--confete-menta); color:#06312A}
-.passo h3{font-size:21px; font-weight:700; margin-bottom:8px}
-.passo p{color:var(--sobre-escuro-2); font-size:15.5px}
-.passo__t{display:inline-block; margin-top:12px; font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--confete-sol)}
+.passo:nth-child(4) .passo__n{background:var(--confete-uva); color:#fff}
+.passo h3{font-size:19px; font-weight:700; margin-bottom:8px}
+.passo p{color:var(--tinta-3); font-size:15px}
 
-/* ---------- serviços ---------- */
-.servicos{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px}
-@media (max-width:900px){ .servicos{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:560px){ .servicos{grid-template-columns:1fr} }
-.serv{
-  background:var(--fundo-2); border-radius:var(--raio); padding:26px 24px 24px;
-  border:1px solid var(--linha); position:relative; overflow:hidden;
+/* ---------- oferta catálogo ---------- */
+.oferta{
+  background:linear-gradient(135deg,var(--confete-rosa) 0%,#B8336A 100%);
+  color:#fff; border-radius:26px; padding:clamp(30px,5vw,58px); text-align:center; box-shadow:var(--sombra);
 }
-.serv::before{content:""; position:absolute; inset:0 auto 0 0; width:5px; background:var(--cor,var(--confete-rosa))}
-.serv h3{font-size:19.5px; font-weight:700; margin-bottom:8px}
-.serv p{font-size:15px; color:var(--tinta-3)}
-.serv__ic{margin-bottom:16px}
-
-/* ---------- portfólio ---------- */
-.galeria{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:44px}
-@media (max-width:900px){ .galeria{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:560px){ .galeria{grid-template-columns:1fr} }
-.foto{
-  position:relative; aspect-ratio:4/5; max-width:100%; border-radius:var(--raio);
-  overflow:hidden; background:var(--fundo-3); display:grid; place-items:center;
-  border:2px dashed var(--linha);
+.oferta h2{color:#fff}
+.oferta p{color:#FFE3EC; max-width:54ch; margin-inline:auto; margin-top:14px}
+.oferta .micro{color:#FFD2E0}
+.oferta__selo{
+  display:inline-block; background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.35);
+  border-radius:999px; padding:6px 16px; font-size:12px; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; margin-bottom:16px;
 }
-.foto--alta{aspect-ratio:4/5}
-@media (min-width:900px){ .foto:nth-child(1),.foto:nth-child(6){grid-row:span 1} }
-.foto svg{width:74%; height:auto}
-.foto figcaption{
-  position:absolute; left:0; right:0; bottom:0; padding:22px 18px 16px;
-  background:linear-gradient(to top,rgba(36,24,38,.92),transparent);
-  color:#F6EAEF; font-size:14px; font-weight:600;
-}
-.chip{
-  position:absolute; top:10px; right:10px; z-index:2;
-  background:var(--confete-uva); color:#fff; font-size:10.5px; font-weight:700;
-  letter-spacing:.1em; text-transform:uppercase; padding:5px 10px; border-radius:999px;
-}
-
-/* ---------- pacotes ---------- */
-.pacotes{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:46px; align-items:start}
-@media (max-width:900px){ .pacotes{grid-template-columns:1fr; max-width:470px; margin-inline:auto} }
-.pac{
-  background:var(--fundo-2); border:1px solid var(--linha); border-radius:var(--raio);
-  padding:30px 26px; display:flex; flex-direction:column; gap:16px;
-}
-.pac--destaque{
-  border:2px solid var(--confete-rosa); box-shadow:var(--sombra); position:relative;
-  background:var(--fundo-2);
-}
-.pac--destaque::after{
-  content:"Mais pedido"; position:absolute; top:-13px; left:50%; transform:translateX(-50%);
-  background:var(--confete-rosa); color:#fff; font-size:11.5px; font-weight:700;
-  letter-spacing:.08em; text-transform:uppercase; padding:5px 16px; border-radius:999px; white-space:nowrap;
-}
-.pac h3{font-size:23px; font-weight:800}
-.pac__preco{font-family:var(--fonte-display); font-weight:800; font-size:31px; letter-spacing:-.03em; color:var(--confete-rosa)}
-.pac__preco small{display:block; font-family:var(--fonte-corpo); font-size:13px; font-weight:500; color:var(--tinta-3); letter-spacing:0}
-.pac ul{list-style:none; margin:0; padding:0; display:grid; gap:11px; font-size:15px; color:var(--tinta-2)}
-.pac li{display:flex; gap:10px; align-items:flex-start}
-.pac li svg{flex:none; margin-top:4px}
-.pac .btn{margin-top:auto; width:100%}
+.oferta .btn{margin-top:22px}
 
 /* ---------- depoimentos ---------- */
 .depos{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px}
 @media (max-width:900px){ .depos{grid-template-columns:1fr} }
-.depo{
-  background:var(--escuro-2); border:1px solid var(--linha-escura); border-radius:var(--raio);
-  padding:26px 24px; display:flex; flex-direction:column; gap:14px;
-}
-.depo p{font-size:16px; color:var(--sobre-escuro); line-height:1.65}
-.depo__pe{display:flex; align-items:center; gap:12px; margin-top:auto}
-.depo__av{width:40px; height:40px; border-radius:50%; display:grid; place-items:center; font-family:var(--fonte-display); font-weight:800; color:#fff; font-size:15px; flex:none}
-.depo__pe b{display:block; font-size:14.5px; color:var(--sobre-escuro)}
-.depo__pe span{font-size:12.5px; color:var(--sobre-escuro-2)}
+.depo{background:var(--escuro-2); border:1px solid var(--linha-escura); border-radius:var(--raio); padding:26px 24px; display:flex; flex-direction:column; gap:13px}
+.depo p{font-size:15.5px; color:var(--sobre-escuro); line-height:1.65}
+.depo footer{font-size:13.5px; font-weight:700; color:var(--confete-sol); margin-top:auto}
 .estrelas{display:flex; gap:3px}
 
-/* ---------- sobre ---------- */
-.sobre{display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(24px,5vw,56px); align-items:center}
-@media (max-width:860px){ .sobre{grid-template-columns:1fr} }
-
-/* ---------- garantia ---------- */
-.garantia{
-  background:var(--confete-sol); color:#3A2408; border-radius:var(--raio);
-  padding:clamp(28px,4vw,40px); display:flex; gap:24px; align-items:center; flex-wrap:wrap;
-}
-.garantia h3{font-size:clamp(21px,2.6vw,27px); font-weight:800; margin-bottom:8px; color:#3A2408}
-.garantia p{font-size:16px; color:#5A3A12; max-width:62ch}
-.garantia svg{flex:none}
-
 /* ---------- faq ---------- */
-.faq{margin-top:40px; display:grid; gap:10px; max-width:820px}
+.faq{margin-top:40px; display:grid; gap:10px; max-width:820px; margin-inline:auto}
 details{background:var(--fundo-2); border:1px solid var(--linha); border-radius:14px; overflow:hidden}
-summary{
-  cursor:pointer; list-style:none; padding:19px 54px 19px 22px; position:relative;
-  font-weight:700; font-size:16.5px; color:var(--tinta);
-}
+details[open]{border-color:var(--confete-rosa)}
+summary{cursor:pointer; list-style:none; padding:19px 54px 19px 22px; position:relative; font-weight:700; font-size:16.5px; color:var(--tinta)}
 summary::-webkit-details-marker{display:none}
-summary::after{
-  content:"+"; position:absolute; right:20px; top:50%; transform:translateY(-50%);
-  font-family:var(--fonte-display); font-size:24px; font-weight:700; color:var(--confete-rosa); line-height:1;
-}
+summary::after{content:"+"; position:absolute; right:20px; top:50%; transform:translateY(-50%); font-family:var(--fonte-display); font-size:24px; font-weight:700; color:var(--confete-rosa); line-height:1}
 details[open] summary::after{content:"–"}
 details p{padding:0 22px 20px; color:var(--tinta-3); font-size:15.5px}
 
 /* ---------- cta final ---------- */
-.fechamento{text-align:center}
-.fechamento h2{font-size:clamp(30px,4.8vw,50px)}
-.fechamento .sub{margin-inline:auto}
-.fechamento .hero__acoes{justify-content:center}
-.urgencia{
-  display:inline-flex; align-items:center; gap:9px; margin-top:22px;
-  background:rgba(232,54,93,.12); color:var(--confete-rosa);
-  border:1px solid rgba(232,54,93,.3); border-radius:999px;
-  padding:8px 18px; font-size:14px; font-weight:700;
-}
-.pulso{width:8px; height:8px; border-radius:50%; background:var(--confete-rosa)}
-@media (prefers-reduced-motion:no-preference){ .pulso{animation:pulso 1.8s ease-in-out infinite} }
-@keyframes pulso{0%,100%{opacity:1}50%{opacity:.25}}
+.fechamento{background:linear-gradient(135deg,#2A1B2E 0%,#5A2C46 100%); color:#fff; border-radius:26px; padding:clamp(30px,5vw,58px); text-align:center; box-shadow:var(--sombra)}
+.fechamento h2{color:#fff}
+.fechamento p{color:#E7CFDB; max-width:54ch; margin-inline:auto; margin-top:14px}
+.fechamento .micro{color:#C4AEC9}
+.fechamento .btn{margin-top:22px}
+.fechamento a.destaque{color:var(--confete-sol); font-weight:700}
 
 /* ---------- rodapé ---------- */
-.rodape{background:var(--escuro); color:var(--sobre-escuro-2); padding-block:48px 34px; font-size:14.5px}
+.rodape{background:var(--escuro); color:var(--sobre-escuro-2); padding-block:48px 110px; font-size:14.5px}
+@media (min-width:880px){ .rodape{padding-bottom:34px} }
 .rodape__grade{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:34px}
 @media (max-width:760px){ .rodape__grade{grid-template-columns:1fr} }
 .rodape h4{font-family:var(--fonte-display); font-size:15px; font-weight:700; color:var(--sobre-escuro); margin:0 0 14px; letter-spacing:.06em; text-transform:uppercase}
-.rodape a{text-decoration:none; color:var(--sobre-escuro-2)}
-.rodape a:hover{color:var(--confete-sol)}
+.rodape a{text-decoration:none; color:var(--confete-sol)}
+.rodape a:hover{text-decoration:underline}
 .rodape ul{list-style:none; margin:0; padding:0; display:grid; gap:9px}
 .rodape__fim{margin-top:36px; padding-top:20px; border-top:1px solid var(--linha-escura); font-size:13px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
 
-/* ---------- whatsapp flutuante ---------- */
-.zap-fixo{
-  position:fixed; right:16px; bottom:calc(16px + env(safe-area-inset-bottom,0px)); z-index:60;
-  width:58px; height:58px; border-radius:50%; background:#25D366;
-  display:grid; place-items:center; box-shadow:0 14px 30px -10px rgba(37,211,102,.8);
-  text-decoration:none; transition:transform .16s ease;
+/* ---------- ctas fixos ---------- */
+.fixo-mob{
+  position:fixed; left:0; right:0; bottom:0; z-index:60;
+  background:color-mix(in srgb,var(--fundo) 96%,transparent); backdrop-filter:blur(10px);
+  border-top:1px solid var(--linha);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+  display:flex; gap:12px; align-items:center; justify-content:space-between;
 }
-.zap-fixo:hover{transform:scale(1.07)}
+.fixo-mob span{font-size:12.5px; font-weight:600; color:var(--tinta); line-height:1.3}
+.fixo-mob .btn{flex:none}
+@media (min-width:880px){ .fixo-mob{display:none} }
+.zap-fixo{display:none}
+@media (min-width:880px){
+  .zap-fixo{
+    display:grid; place-items:center; position:fixed; right:24px; bottom:24px; z-index:60;
+    width:60px; height:60px; border-radius:50%; background:var(--wa);
+    box-shadow:0 14px 30px -10px rgba(37,211,102,.8); text-decoration:none; transition:transform .18s ease;
+  }
+  .zap-fixo:hover{transform:scale(1.07)}
+}
 
-/* ---------- marcador de conteúdo de exemplo ---------- */
-[data-exemplo]{position:relative}
-[data-exemplo]::before{
-  content:"substituir"; position:absolute; top:8px; left:8px; z-index:3;
+/* ---------- marcador de conteúdo a confirmar ---------- */
+[data-conferir]{position:relative}
+[data-conferir]::before{
+  content:"confirmar"; position:absolute; top:8px; left:8px; z-index:3;
   background:var(--confete-uva); color:#fff; font-size:10px; font-weight:700;
   letter-spacing:.12em; text-transform:uppercase; padding:4px 9px; border-radius:999px;
   font-family:var(--fonte-corpo); pointer-events:none;
 }
-body.publicado [data-exemplo]::before{display:none}
+body.publicado [data-conferir]::before{display:none}
 body.publicado .preview-bar{display:none}
-body.publicado .foto{border-style:solid; border-color:var(--linha)}
-body.publicado .chip{display:none}
 </style>
 </head>
 <body>
 
-<!-- ============ aviso de preview (some com body.publicado) ============ -->
 <div class="preview-bar" id="barraPreview">
-  <span><strong>Preview para aprovação.</strong> Tudo com a tarja roxa <em>“substituir”</em> é exemplo: fotos, números, depoimentos e valores entram depois.</span>
+  <span><strong>Preview para aprovação.</strong> O que está com a tarja roxa <em>“confirmar”</em> precisa do ok da Line antes de publicar.</span>
   <button type="button" id="fecharPreview">ocultar avisos</button>
 </div>
+
+<div class="agenda">🎈 Agenda de <b data-ano-agenda>2026</b> aberta — as datas de fim de semana saem primeiro.</div>
 
 <!-- ============ topo ============ -->
 <header class="topo">
   <div class="wrap topo__in">
     <a class="marca" href="#topo">
-      <svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true">
-        <ellipse cx="10" cy="11" rx="8.4" ry="10" fill="#E8365D"/>
-        <ellipse cx="21" cy="14" rx="7.2" ry="8.6" fill="#FFB23F"/>
-        <path d="M10 21.5c1.8 4 .5 6.5-1.4 8.5M21 22.8c-1.4 3.4-.3 5.6 1.3 7.2" stroke="#2FB8A2" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      </svg>
-      <span>Dini Balões<small data-cidade>Decoração de festas</small></span>
+      <img src="img/logo.jpg" alt="Logo da Line Balões" width="42" height="42">
+      <span>Line Balões<small>Jaguaré · São Paulo</small></span>
     </a>
     <nav class="nav" aria-label="Seções">
-      <a href="#como">Como funciona</a>
       <a href="#servicos">Serviços</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#pacotes">Pacotes</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#como">Como funciona</a>
+      <a href="#catalogo">Catálogo</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <a class="btn btn--zap" data-zap href="#">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-2.6-.9-4.4-3.4-4.5-3.6-.2-.2-1.2-1.5-1.2-2.9 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 1.5 1 1.8 1.1.2 0 .4 0 .5-.1l.7-.9c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3v.5Z"/></svg>
-      <span>Orçamento no WhatsApp</span>
+    <a class="btn btn--zap btn--p" data-zap href="#">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-2.6-.9-4.4-3.4-4.5-3.6-.2-.2-1.2-1.5-1.2-2.9 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 1.5 1 1.8 1.1.2 0 .4 0 .5-.1l.7-.9c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3v.5Z"/></svg>
+      <span>Pedir orçamento</span>
     </a>
   </div>
 </header>
@@ -395,124 +373,67 @@ body.publicado .chip{display:none}
 <section class="hero" id="topo">
   <div class="wrap hero__grade">
     <div>
-      <p class="olho">Decoração de festas · <span data-cidade-hero>sua cidade</span></p>
+      <p class="olho">Decoração de festas · Jaguaré, São Paulo</p>
       <h1>A gente monta, desmonta e leva embora. Você só <em>aparece nas fotos</em>.</h1>
-      <p class="sub">Painéis, arcos desconstruídos e cenários completos para aniversário infantil, chá revelação, 15 anos e festa de empresa. Projeto fechado antes, montagem no dia, desmontagem depois da festa.</p>
+      <p class="sub">Painéis instagramáveis, arcos de balões e arranjos florais montados por nós, no seu endereço. Você manda a referência — a gente entrega o cenário pronto.</p>
+
+      <ul class="pilulas">
+        <li>Aniversários</li>
+        <li>Eventos corporativos</li>
+        <li>Festa em casa</li>
+        <li>Flores e plantas</li>
+      </ul>
 
       <div class="hero__acoes">
         <a class="btn btn--zap" data-zap href="#">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-2.6-.9-4.4-3.4-4.5-3.6-.2-.2-1.2-1.5-1.2-2.9 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 1.5 1 1.8 1.1.2 0 .4 0 .5-.1l.7-.9c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3v.5Z"/></svg>
-          Pedir orçamento agora
+          Quero meu orçamento
         </a>
-        <a class="btn btn--linha" href="#portfolio">Ver montagens reais</a>
+        <a class="btn btn--linha" href="#galeria">Ver decorações prontas</a>
       </div>
+      <p class="micro">Resposta no horário comercial · Orçamento sem compromisso</p>
 
       <div class="selos">
-        <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Montagem e desmontagem inclusas</span>
-        <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Resposta em até <b data-prazo>1 hora</b></span>
-        <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Orçamento sem compromisso</span>
+        <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Montagem feita pela nossa equipe</span>
+        <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> São Paulo capital e região</span>
+        <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Balões, flores e plantas</span>
       </div>
     </div>
 
-    <div aria-hidden="true">
-      <svg class="arco" viewBox="0 0 420 380" role="img" aria-label="Ilustração de um arco de balões">
-        <defs>
-          <radialGradient id="gA" cx="35%" cy="28%"><stop offset="0" stop-color="#FF7C9B"/><stop offset="1" stop-color="#E8365D"/></radialGradient>
-          <radialGradient id="gB" cx="35%" cy="28%"><stop offset="0" stop-color="#FFD28C"/><stop offset="1" stop-color="#FFB23F"/></radialGradient>
-          <radialGradient id="gC" cx="35%" cy="28%"><stop offset="0" stop-color="#7BE0D0"/><stop offset="1" stop-color="#2FB8A2"/></radialGradient>
-          <radialGradient id="gD" cx="35%" cy="28%"><stop offset="0" stop-color="#B78CF0"/><stop offset="1" stop-color="#7B4BC9"/></radialGradient>
-          <radialGradient id="gE" cx="35%" cy="28%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F3D9E1"/></radialGradient>
-        </defs>
-        <!-- painel de fundo -->
-        <rect x="96" y="106" width="228" height="248" rx="114" fill="#2A1B2E" opacity=".07"/>
-        <rect x="112" y="122" width="196" height="216" rx="98" fill="none" stroke="#E8365D" stroke-width="2.5" opacity=".35" stroke-dasharray="7 9"/>
-        <!-- balões do arco -->
-        <g class="bal"><circle cx="56"  cy="268" r="30" fill="url(#gA)"/></g>
-        <g class="bal"><circle cx="44"  cy="206" r="21" fill="url(#gB)"/></g>
-        <g class="bal"><circle cx="72"  cy="162" r="26" fill="url(#gE)"/></g>
-        <g class="bal"><circle cx="78"  cy="110" r="17" fill="url(#gC)"/></g>
-        <g class="bal"><circle cx="118" cy="74"  r="27" fill="url(#gA)"/></g>
-        <g class="bal"><circle cx="166" cy="46"  r="20" fill="url(#gD)"/></g>
-        <g class="bal"><circle cx="214" cy="36"  r="29" fill="url(#gB)"/></g>
-        <g class="bal"><circle cx="262" cy="48"  r="18" fill="url(#gE)"/></g>
-        <g class="bal"><circle cx="302" cy="78"  r="26" fill="url(#gA)"/></g>
-        <g class="bal"><circle cx="340" cy="120" r="20" fill="url(#gC)"/></g>
-        <g class="bal"><circle cx="360" cy="172" r="28" fill="url(#gB)"/></g>
-        <g class="bal"><circle cx="372" cy="228" r="17" fill="url(#gD)"/></g>
-        <g class="bal"><circle cx="362" cy="278" r="25" fill="url(#gE)"/></g>
-        <!-- mesa do bolo -->
-        <ellipse cx="210" cy="332" rx="86" ry="15" fill="#2A1B2E" opacity=".12"/>
-        <rect x="176" y="296" width="68" height="34" rx="7" fill="#FFB23F"/>
-        <rect x="176" y="296" width="68" height="11" rx="5" fill="#FFD28C"/>
-        <circle cx="210" cy="290" r="4" fill="#E8365D"/>
-      </svg>
+    <div class="hero__arte">
+      <img src="img/foto-8.jpg" alt="Decoração de 15 anos com arco de balões em tons de rosa, corações metalizados e número 15 dourado" width="716" height="819">
+      <div class="hero__cracha">Montagem no local, no horário combinado<small>Você não levanta um dedo.</small></div>
     </div>
-  </div>
-</section>
-
-<!-- ============ números ============ -->
-<section class="faixa">
-  <div class="wrap faixa__in" data-exemplo>
-    <div class="num"><b data-n-festas>+300</b><span>festas montadas</span></div>
-    <div class="num"><b data-n-anos>8</b><span>anos de estrada</span></div>
-    <div class="num"><b data-n-nota>5,0</b><span>nota das clientes</span></div>
-    <div class="num"><b data-n-prazo>1h</b><span>para responder</span></div>
   </div>
 </section>
 
 <!-- ============ dores ============ -->
-<section class="secao">
+<section class="secao secao--escura">
   <div class="wrap">
-    <p class="olho">Por que chamar alguém</p>
-    <h2>Você já tentou fazer sozinha, né?</h2>
-    <p class="sub">A gente ouve essas quatro frases quase toda semana. Se alguma é a sua, a conversa já começa resolvida.</p>
+    <p class="olho">Se você já passou por isso…</p>
+    <h2>Organizar festa não devia ser sofrimento</h2>
+    <p class="sub">A maioria das nossas clientes chega depois de tentar resolver sozinha. Soa familiar?</p>
 
     <div class="dores">
       <div class="dor">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8365D" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
-        <p>Virou a madrugada enchendo balão e, na hora da festa, metade já estava murcha.</p>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFB23F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6 3.2 19.4M8 4h12v12"/><circle cx="7" cy="17" r="3"/></svg>
+        <h3>Kit de balão da internet</h3>
+        <p>Chegou torto, faltou peça e você passou a véspera enchendo balão de madrugada.</p>
       </div>
       <div class="dor">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8365D" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
-        <p>Pediu orçamento em cinco perfis do Instagram e até hoje ninguém respondeu.</p>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFB23F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9 9h.01M15 9h.01"/></svg>
+        <h3>Ninguém responde</h3>
+        <p>Mandou mensagem para cinco decoradores e recebeu um orçamento — três dias depois.</p>
       </div>
       <div class="dor">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8365D" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
-        <p>A decoração chegou bem diferente da foto que tinha sido combinada.</p>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFB23F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="m21 16-5-5-7 7"/></svg>
+        <h3>A foto não ficou igual</h3>
+        <p>Você mostrou a referência e veio outra coisa. E a festa só acontece uma vez.</p>
       </div>
       <div class="dor">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8365D" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
-        <p>No fim da noite, com todo mundo indo embora, sobrou pra você desmontar tudo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ como funciona ============ -->
-<section class="secao secao--escura" id="como">
-  <div class="wrap">
-    <p class="olho">Como funciona</p>
-    <h2>Três passos, e a decoração deixa de ser problema seu</h2>
-    <p class="sub">É uma sequência mesmo: cada etapa só acontece depois que você aprovou a anterior.</p>
-
-    <div class="passos">
-      <div class="passo">
-        <div class="passo__n">1</div>
-        <h3>Você manda a data e o tema</h3>
-        <p>Chama no WhatsApp com a data, o local e a ideia — pode ser só um print do Pinterest. Não precisa saber nada de balão.</p>
-        <span class="passo__t">leva 2 minutos</span>
-      </div>
-      <div class="passo">
-        <div class="passo__n">2</div>
-        <h3>A gente desenha o cenário e fecha o valor</h3>
-        <p>Você recebe a proposta com as cores, o tamanho do painel e o valor fechado. Ajusta o que quiser antes de confirmar. Depois disso o preço não muda.</p>
-        <span class="passo__t">resposta em até <span data-prazo>1 hora</span></span>
-      </div>
-      <div class="passo">
-        <div class="passo__n">3</div>
-        <h3>No dia, a gente monta e volta pra desmontar</h3>
-        <p>Chegamos antes do horário, montamos tudo, você confere e tira as fotos. Terminou a festa, voltamos e levamos tudo embora.</p>
-        <span class="passo__t">montagem e desmontagem inclusas</span>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFB23F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+        <h3>Atraso na montagem</h3>
+        <p>Convidado chegando e o painel ainda no chão. Isso não acontece com a gente.</p>
       </div>
     </div>
   </div>
@@ -520,276 +441,221 @@ body.publicado .chip{display:none}
 
 <!-- ============ serviços ============ -->
 <section class="secao" id="servicos">
-  <div class="wrap">
-    <p class="olho">O que montamos</p>
-    <h2>Cada festa tem um cenário — e a gente faz todos</h2>
-    <p class="sub">Do painel redondo simples ao cenário completo com mobiliário, iluminação e balão personalizado com o nome.</p>
+  <div class="wrap centro">
+    <p class="olho">O que fazemos</p>
+    <h2>Três linhas de decoração, um padrão só</h2>
+    <p class="sub">Do painel de aniversário em casa à ativação de marca dentro da empresa.</p>
+  </div>
+  <div class="wrap cartoes">
 
-    <div class="servicos">
-      <article class="serv" style="--cor:#E8365D">
-        <div class="serv__ic"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14" cy="15" r="9" fill="#E8365D"/><circle cx="26" cy="19" r="7" fill="#FFB23F"/><path d="M14 24c2 4 1 7-1 9" stroke="#2FB8A2" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-        <h3>Aniversário infantil</h3>
-        <p>Painel temático, arco desconstruído, mesa do bolo e os detalhes do tema que a criança pediu.</p>
-      </article>
-      <article class="serv" style="--cor:#FFB23F">
-        <div class="serv__ic"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="17" r="11" fill="none" stroke="#FFB23F" stroke-width="3"/><circle cx="16" cy="15" r="3.4" fill="#2FB8A2"/><circle cx="24" cy="19" r="3.4" fill="#E8365D"/></svg></div>
-        <h3>Chá revelação</h3>
-        <p>Cenário em azul e rosa, caixa surpresa com os balões da revelação e o efeito na hora certa.</p>
-      </article>
-      <article class="serv" style="--cor:#7B4BC9">
-        <div class="serv__ic"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6l3.6 7.6 8.4 1.1-6.2 5.7 1.6 8.2L20 24.8 12.6 28.6l1.6-8.2L8 14.7l8.4-1.1z" fill="#7B4BC9"/></svg></div>
-        <h3>15 anos e debutante</h3>
-        <p>Backdrop de impacto para a valsa, arco orgânico e mobiliário que combina com o vestido.</p>
-      </article>
-      <article class="serv" style="--cor:#2FB8A2">
-        <div class="serv__ic"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 30s-9-5.6-9-12a5.4 5.4 0 0 1 9-4 5.4 5.4 0 0 1 9 4c0 6.4-9 12-9 12z" fill="#2FB8A2"/></svg></div>
-        <h3>Noivado e casamento</h3>
-        <p>Arcos em tons neutros, cascata de balões na entrada e cenário para a mesa dos noivos.</p>
-      </article>
-      <article class="serv" style="--cor:#E8365D">
-        <div class="serv__ic"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="14" width="24" height="18" rx="3" fill="#E8365D"/><path d="M15 14v-3a5 5 0 0 1 10 0v3" stroke="#FFB23F" stroke-width="3" fill="none"/></svg></div>
-        <h3>Empresa e inauguração</h3>
-        <p>Fachada decorada, arco na entrada e balões na cor da marca. Emitimos nota fiscal.</p>
-      </article>
-      <article class="serv" style="--cor:#FFB23F">
-        <div class="serv__ic"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect x="9" y="17" width="22" height="15" rx="2.5" fill="#FFB23F"/><path d="M20 17v15M9 22h22" stroke="#fff" stroke-width="2.6"/><path d="M20 17c-4-6-9-3-6 0m6 0c4-6 9-3 6 0" fill="#E8365D"/></svg></div>
-        <h3>Surpresa e entrega expressa</h3>
-        <p>Buquê de balões, cascata na porta e balão bolha com nome — entregue no endereço e no horário que você marcar.</p>
-      </article>
+    <article class="cartao">
+      <img loading="lazy" src="img/foto-3.jpg" alt="Festa infantil com tema Pequena Sereia: painel do fundo do mar, arco de balões azul e rosa e mesa do bolo" width="1280" height="719">
+      <div class="cartao__c">
+        <span class="etiqueta" style="--cor:#E8365D">Social</span>
+        <h3>Aniversários e comemorações</h3>
+        <p>Painel instagramável, arco de balões e mesa temática para o momento que todo mundo vai fotografar.</p>
+        <ul>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Tema livre ou referência do Pinterest</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Kits Básic e Start com preço fechado</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Montagem inclusa</li>
+        </ul>
+        <a class="btn btn--zap btn--p" data-zap data-msg="Olá, Line Balões! Quero orçamento de decoração para um aniversário." href="#">Orçar festa social</a>
+      </div>
+    </article>
+
+    <article class="cartao">
+      <img loading="lazy" src="img/foto-1.jpg" alt="Painel corporativo de LED com arco de balões em azul, dourado e rose gold para celebração de 25 mil seguidores" width="1264" height="1456">
+      <div class="cartao__c">
+        <span class="etiqueta" style="--cor:#2FB8A2">Corporativo</span>
+        <h3>Empresas e eventos de marca</h3>
+        <p>Inaugurações, confraternizações e ativações com as cores da sua marca — e nota fiscal.</p>
+        <ul>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Paleta fechada com a identidade da empresa</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Montagem fora do horário de expediente</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Projeto enviado antes da aprovação</li>
+        </ul>
+        <a class="btn btn--zap btn--p" data-zap data-msg="Olá, Line Balões! Quero orçamento de decoração corporativa." href="#">Orçar evento corporativo</a>
+      </div>
+    </article>
+
+    <article class="cartao">
+      <img loading="lazy" src="img/foto-6.jpg" alt="Decoração ao ar livre com painel arredondado azul-marinho, cilindros amarelos e arranjos de flores brancas e amarelas" width="1120" height="930">
+      <div class="cartao__c">
+        <span class="etiqueta" style="--cor:#7B4BC9">Domiciliar · Flores</span>
+        <h3>Surpresas em casa</h3>
+        <p>Pedido de namoro, chá revelação, bodas, Dia das Mães. Balões, flores e arranjos montados no seu apartamento.</p>
+        <ul>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Montada enquanto a pessoa não está</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Arranjos florais e plantas sob encomenda</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Funciona em espaço pequeno</li>
+        </ul>
+        <a class="btn btn--zap btn--p" data-zap data-msg="Olá, Line Balões! Quero uma decoração surpresa em casa." href="#">Orçar surpresa em casa</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ galeria ============ -->
+<section class="secao secao--alt" id="galeria">
+  <div class="wrap centro">
+    <p class="olho">Trabalhos reais</p>
+    <h2>Festas que a gente montou</h2>
+    <p class="sub">Nada de banco de imagens: tudo aqui saiu das nossas mãos, em São Paulo.</p>
+  </div>
+  <div class="wrap mosaico">
+    <figure><img loading="lazy" src="img/foto-4.jpg" alt="Festa infantil tema circo com arco de balões em degradê azul, verde e amarelo, palhaço de balão e mesa de guloseimas"><figcaption>Tema circo — mesa temática e escultura de balão</figcaption></figure>
+    <figure><img loading="lazy" src="img/foto-5.jpg" alt="Decoração de Halloween no quintal com painel de fantasma, aranha de balão e balões laranja, preto e roxo"><figcaption>Halloween no quintal — “Trick or Three”</figcaption></figure>
+    <figure><img loading="lazy" src="img/foto-3.jpg" alt="Cenário completo de festa tema Pequena Sereia com painel do fundo do mar e cilindros decorados"><figcaption>Pequena Sereia — cenário completo</figcaption></figure>
+    <figure><img loading="lazy" src="img/foto-7.jpg" alt="Buquê de balões metalizados personalizados com os nomes dos setores de uma empresa"><figcaption>Balões personalizados por setor — celebração interna</figcaption></figure>
+    <figure><img loading="lazy" src="img/foto-2.jpg" alt="Arco de balões em azul e branco iluminado por letreiro de neon em evento noturno"><figcaption>Arco com neon — evento noturno</figcaption></figure>
+    <figure><img loading="lazy" src="img/foto-6.jpg" alt="Decoração de jardim com painel azul-marinho, cilindros amarelos e arranjos florais"><figcaption>Decoração ao ar livre com flores</figcaption></figure>
+    <figure><img loading="lazy" src="img/foto-1.jpg" alt="Painel de LED corporativo com arco de balões azul, dourado e rose gold"><figcaption>Ativação de marca — painel de LED e arco orgânico</figcaption></figure>
+    <figure><img loading="lazy" src="img/foto-8.jpg" alt="Decoração de 15 anos em tons de rosa com corações metalizados e número 15 dourado"><figcaption>15 anos — rosa, vinho e dourado</figcaption></figure>
+  </div>
+  <div class="wrap centro" style="margin-top:30px">
+    <a class="btn btn--zap" data-zap data-msg="Olá, Line Balões! Vi a galeria no site e quero um orçamento." href="#">Quero algo assim na minha festa</a>
+  </div>
+</section>
+
+<!-- ============ como funciona ============ -->
+<section class="secao" id="como">
+  <div class="wrap centro">
+    <p class="olho">Simples assim</p>
+    <h2>Da mensagem à festa pronta em 4 passos</h2>
+    <p class="sub">Cada etapa só acontece depois que você aprovou a anterior.</p>
+  </div>
+  <div class="wrap passos">
+    <div class="passo">
+      <div class="passo__n">1</div>
+      <h3>Você chama no WhatsApp</h3>
+      <p>Conta a data, o local e o tema. Se tiver uma foto de referência, melhor ainda.</p>
+    </div>
+    <div class="passo">
+      <div class="passo__n">2</div>
+      <h3>Recebe a proposta</h3>
+      <p>Enviamos o catálogo com os kits, valores e o que está incluso. Sem letra miúda.</p>
+    </div>
+    <div class="passo">
+      <div class="passo__n">3</div>
+      <h3>Reserva a data</h3>
+      <p>Confirmação com sinal. A data fica bloqueada no nome da sua festa.</p>
+    </div>
+    <div class="passo">
+      <div class="passo__n">4</div>
+      <h3>A gente monta</h3>
+      <p>Chegamos antes, montamos tudo e deixamos o cenário pronto pra foto.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ portfólio ============ -->
-<section class="secao secao--alt" id="portfolio">
+<!-- ============ catálogo ============ -->
+<section class="secao" id="catalogo" style="padding-top:0">
   <div class="wrap">
-    <p class="olho">Portfólio</p>
-    <h2>Montagens de verdade, fotografadas no dia</h2>
-    <p class="sub">Sem banco de imagem: toda foto aqui é de uma festa que a Dini montou. Passe o olho e veja se o estilo combina com o que você imaginou.</p>
-
-    <div class="galeria">
-      <figure class="foto" data-slot="foto" data-nome="painel-safari">
-        <span class="chip">foto 1</span>
-        <svg viewBox="0 0 160 200" aria-hidden="true"><rect x="30" y="40" width="100" height="120" rx="50" fill="#E8365D" opacity=".14"/><circle cx="46" cy="66" r="15" fill="#E8365D" opacity=".5"/><circle cx="80" cy="50" r="19" fill="#FFB23F" opacity=".5"/><circle cx="114" cy="68" r="14" fill="#2FB8A2" opacity=".5"/><circle cx="124" cy="104" r="11" fill="#7B4BC9" opacity=".4"/><circle cx="38" cy="104" r="11" fill="#FFB23F" opacity=".4"/></svg>
-        <figcaption>Painel redondo + arco desconstruído — aniversário 1 aninho</figcaption>
-      </figure>
-      <figure class="foto" data-slot="foto" data-nome="cha-revelacao">
-        <span class="chip">foto 2</span>
-        <svg viewBox="0 0 160 200" aria-hidden="true"><circle cx="58" cy="78" r="26" fill="#7BC4F0" opacity=".5"/><circle cx="102" cy="78" r="26" fill="#FF9EBB" opacity=".5"/><rect x="56" y="118" width="48" height="40" rx="5" fill="#2FB8A2" opacity=".45"/></svg>
-        <figcaption>Chá revelação — caixa surpresa e cenário azul e rosa</figcaption>
-      </figure>
-      <figure class="foto" data-slot="foto" data-nome="15-anos">
-        <span class="chip">foto 3</span>
-        <svg viewBox="0 0 160 200" aria-hidden="true"><rect x="36" y="34" width="88" height="130" rx="8" fill="#7B4BC9" opacity=".22"/><circle cx="50" cy="52" r="13" fill="#7B4BC9" opacity=".5"/><circle cx="80" cy="40" r="17" fill="#E8365D" opacity=".45"/><circle cx="112" cy="54" r="13" fill="#FFB23F" opacity=".5"/></svg>
-        <figcaption>Backdrop de 15 anos com arco orgânico</figcaption>
-      </figure>
-      <figure class="foto" data-slot="foto" data-nome="mesa-bolo">
-        <span class="chip">foto 4</span>
-        <svg viewBox="0 0 160 200" aria-hidden="true"><ellipse cx="80" cy="150" rx="52" ry="11" fill="#2A1B2E" opacity=".14"/><rect x="52" y="108" width="56" height="42" rx="6" fill="#FFB23F" opacity=".6"/><circle cx="80" cy="66" r="24" fill="#E8365D" opacity=".4"/><circle cx="48" cy="82" r="14" fill="#2FB8A2" opacity=".45"/><circle cx="112" cy="82" r="14" fill="#7B4BC9" opacity=".4"/></svg>
-        <figcaption>Mesa do bolo com cenário completo</figcaption>
-      </figure>
-      <figure class="foto" data-slot="foto" data-nome="corporativo">
-        <span class="chip">foto 5</span>
-        <svg viewBox="0 0 160 200" aria-hidden="true"><rect x="28" y="96" width="104" height="66" rx="5" fill="#2A1B2E" opacity=".13"/><path d="M28 96c14-46 90-46 104 0" fill="none" stroke="#E8365D" stroke-width="13" opacity=".45" stroke-linecap="round"/><path d="M40 92c12-36 68-36 80 0" fill="none" stroke="#FFB23F" stroke-width="10" opacity=".45" stroke-linecap="round"/></svg>
-        <figcaption>Arco na fachada — inauguração de loja</figcaption>
-      </figure>
-      <figure class="foto" data-slot="foto" data-nome="surpresa">
-        <span class="chip">foto 6</span>
-        <svg viewBox="0 0 160 200" aria-hidden="true"><circle cx="80" cy="72" r="30" fill="#E8365D" opacity=".38"/><circle cx="52" cy="58" r="17" fill="#FFB23F" opacity=".5"/><circle cx="108" cy="58" r="17" fill="#2FB8A2" opacity=".45"/><path d="M80 102c2 22-6 34-14 44M80 102c-2 22 6 34 14 44" stroke="#7B4BC9" stroke-width="3" fill="none" opacity=".5" stroke-linecap="round"/></svg>
-        <figcaption>Buquê de balões — entrega surpresa</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ pacotes ============ -->
-<section class="secao" id="pacotes">
-  <div class="wrap">
-    <p class="olho">Pacotes</p>
-    <h2>Escolha o tamanho da festa. O resto é com a gente.</h2>
-    <p class="sub">Valores de referência para uma festa até 40 convidados. O orçamento final sai depois que a gente vê o local e o tema.</p>
-
-    <div class="pacotes" data-exemplo>
-      <article class="pac">
-        <h3>Essencial</h3>
-        <p class="pac__preco" data-preco-1>a partir de R$ 000<small>montagem inclusa</small></p>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Painel redondo com arco desconstruído</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Até 3 cores de balão</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Mesa do bolo simples</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Montagem e desmontagem</li>
-        </ul>
-        <a class="btn btn--linha" data-zap data-msg="Oi! Quero o pacote Essencial." href="#">Quero este</a>
-      </article>
-
-      <article class="pac pac--destaque">
-        <h3>Completo</h3>
-        <p class="pac__preco" data-preco-2>a partir de R$ 000<small>montagem inclusa</small></p>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Tudo do Essencial</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Arco orgânico com balões especiais</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Mobiliário (mesa, cubos e suportes)</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Itens temáticos do personagem</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Projeto do cenário antes de fechar</li>
-        </ul>
-        <a class="btn btn--zap" data-zap data-msg="Oi! Quero o pacote Completo." href="#">Quero este</a>
-      </article>
-
-      <article class="pac">
-        <h3>Premium</h3>
-        <p class="pac__preco" data-preco-3>sob consulta<small>projeto exclusivo</small></p>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Tudo do Completo</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Cenário de parede a parede</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Iluminação e neon personalizado</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Balão bolha personalizado com o nome</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2FB8A2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Equipe de plantão durante a festa</li>
-        </ul>
-        <a class="btn btn--linha" data-zap data-msg="Oi! Quero o pacote Premium." href="#">Falar sobre</a>
-      </article>
+    <div class="oferta">
+      <span class="oferta__selo">Catálogo digital <span data-ano-agenda>2026</span></span>
+      <h2>Veja todos os kits e valores antes de decidir</h2>
+      <p>Catálogo completo de balões e de flores &amp; plantas, com o que está incluso em cada kit. Enviamos na hora pelo WhatsApp — e ainda ajudamos a escolher o kit certo para o seu espaço.</p>
+      <a class="btn" style="background:#fff;color:#B8336A;box-shadow:0 12px 26px -12px rgba(0,0,0,.35)" data-zap data-msg="Olá, Line Balões! Quero receber o catálogo digital com os kits e valores." href="#">Receber o catálogo agora</a>
+      <p class="micro">Grátis · Sem cadastro · Direto no seu WhatsApp</p>
     </div>
   </div>
 </section>
 
 <!-- ============ depoimentos ============ -->
 <section class="secao secao--escura">
-  <div class="wrap">
-    <p class="olho">Quem já contratou</p>
-    <h2>O que as mães falam depois da festa</h2>
-    <p class="sub">Depoimentos reais das clientes, com print do WhatsApp guardado.</p>
-
-    <div class="depos" data-exemplo>
-      <article class="depo">
-        <div class="estrelas" aria-label="5 de 5 estrelas">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-        </div>
-        <p>“[Espaço para o depoimento real da cliente — cole aqui o texto do WhatsApp ou do comentário no Instagram.]”</p>
-        <div class="depo__pe">
-          <span class="depo__av" style="background:#E8365D">?</span>
-          <span><b>Nome da cliente</b><span>Festa · mês/ano</span></span>
-        </div>
-      </article>
-      <article class="depo">
-        <div class="estrelas" aria-label="5 de 5 estrelas">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-        </div>
-        <p>“[Espaço para o depoimento real da cliente.]”</p>
-        <div class="depo__pe">
-          <span class="depo__av" style="background:#FFB23F;color:#3A2408">?</span>
-          <span><b>Nome da cliente</b><span>Festa · mês/ano</span></span>
-        </div>
-      </article>
-      <article class="depo">
-        <div class="estrelas" aria-label="5 de 5 estrelas">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
-        </div>
-        <p>“[Espaço para o depoimento real da cliente.]”</p>
-        <div class="depo__pe">
-          <span class="depo__av" style="background:#2FB8A2;color:#06312A">?</span>
-          <span><b>Nome da cliente</b><span>Festa · mês/ano</span></span>
-        </div>
-      </article>
-    </div>
+  <div class="wrap centro">
+    <p class="olho">Quem já festejou com a gente</p>
+    <h2>O que as clientes dizem</h2>
   </div>
-</section>
-
-<!-- ============ sobre ============ -->
-<section class="secao secao--alt">
-  <div class="wrap sobre">
-    <div class="foto foto--alta" data-slot="foto" data-nome="retrato-dini" style="aspect-ratio:4/5">
-      <span class="chip">foto da Dini</span>
-      <svg viewBox="0 0 160 200" aria-hidden="true"><circle cx="80" cy="74" r="30" fill="#E8365D" opacity=".3"/><path d="M28 168c0-29 23-46 52-46s52 17 52 46z" fill="#7B4BC9" opacity=".25"/><circle cx="126" cy="44" r="15" fill="#FFB23F" opacity=".5"/><circle cx="34" cy="52" r="11" fill="#2FB8A2" opacity=".5"/></svg>
-    </div>
-    <div>
-      <p class="olho">Quem vai montar sua festa</p>
-      <h2>Oi, eu sou a Dini</h2>
-      <p class="sub" data-exemplo style="padding-top:22px">[Espaço para o texto da Dini — conte aqui como começou, há quantos anos monta festas, o que mais gosta de fazer e por que a cliente pode confiar. De 3 a 5 linhas, escrito na primeira pessoa, do jeito que ela fala no WhatsApp.]</p>
-      <p class="sub">O que não muda: quem responde o WhatsApp é a mesma pessoa que aparece no dia para montar. Sem intermediário, sem equipe terceirizada aparecendo de surpresa na sua casa.</p>
-      <div class="hero__acoes">
-        <a class="btn btn--zap" data-zap href="#">Falar com a Dini</a>
-        <a class="btn btn--linha" data-insta href="#" target="_blank" rel="noopener">Ver o Instagram</a>
+  <div class="wrap depos" data-conferir>
+    <article class="depo">
+      <div class="estrelas" aria-label="5 de 5 estrelas">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ garantia ============ -->
-<section class="secao">
-  <div class="wrap">
-    <div class="garantia" data-exemplo>
-      <svg width="58" height="58" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6l22 8v18c0 14-9.6 22.6-22 26-12.4-3.4-22-12-22-26V14z" fill="#3A2408" opacity=".12"/><path d="M32 10l18 6.5V32c0 11.4-7.6 18.6-18 21.6C21.6 50.6 14 43.4 14 32V16.5z" fill="#fff"/><path d="M23 32.5l6.5 6.5L42 26.5" stroke="#E8365D" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div>
-        <h3>Garantia de montagem no horário</h3>
-        <p>[Confirmar com a Dini antes de publicar.] Se a decoração não estiver de pé no horário que foi combinado, a taxa de montagem é devolvida. Garantia simples, escrita no orçamento — sem letra miúda.</p>
+      <p>“Montaram tudo antes da hora e ficou idêntico à referência que mandei. Meu filho não saiu de perto do painel.”</p>
+      <footer>Aniversário infantil · Butantã</footer>
+    </article>
+    <article class="depo">
+      <div class="estrelas" aria-label="5 de 5 estrelas">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
       </div>
-    </div>
+      <p>“Contratamos para a confraternização da empresa. Profissionais, pontuais e o resultado rendeu muita foto no LinkedIn.”</p>
+      <footer>Evento corporativo · Jaguaré</footer>
+    </article>
+    <article class="depo">
+      <div class="estrelas" aria-label="5 de 5 estrelas">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB23F" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.6 5.9 20.8 7.1 14l-5-4.8 6.9-.9z"/></svg>
+      </div>
+      <p>“Fiz uma surpresa de aniversário pra minha esposa. Ela chorou quando abriu a porta. Valeu cada centavo.”</p>
+      <footer>Decoração domiciliar · Lapa</footer>
+    </article>
   </div>
 </section>
 
 <!-- ============ faq ============ -->
 <section class="secao secao--alt" id="faq">
+  <div class="wrap centro">
+    <p class="olho">Dúvidas frequentes</p>
+    <h2>Antes de chamar no WhatsApp</h2>
+  </div>
   <div class="wrap">
-    <p class="olho">Dúvidas</p>
-    <h2>O que todo mundo pergunta antes de fechar</h2>
-
     <div class="faq">
       <details open>
+        <summary>Quais regiões vocês atendem?</summary>
+        <p>São Paulo capital, com base no Jaguaré. Para bairros mais distantes e região metropolitana, a taxa de deslocamento entra no orçamento — antes de você fechar, nunca como surpresa depois.</p>
+      </details>
+      <details>
         <summary>Com quanta antecedência preciso reservar?</summary>
-        <p>Quanto antes, melhor — os fins de semana são os primeiros a fechar. O ideal é de 3 a 4 semanas antes. Mas se a sua festa é neste fim de semana, chama assim mesmo: às vezes ainda dá para encaixar.</p>
+        <p>Quanto antes, melhor — fins de semana e datas comemorativas esgotam primeiro. Mas fale com a gente mesmo em cima da hora: às vezes conseguimos encaixar.</p>
       </details>
       <details>
-        <summary>Quanto custa uma decoração de balões?</summary>
-        <p>Depende do tamanho do painel, da quantidade de balões especiais e do local. Por isso os valores dos pacotes são “a partir de”: o orçamento fechado sai depois que você manda a data, o tema e uma foto do espaço. É gratuito e sai em até <span data-prazo>1 hora</span>.</p>
+        <summary>Vocês montam e desmontam?</summary>
+        <p>Sim. Fazemos a montagem completa no local, no horário combinado. A retirada do material é combinada na contratação.</p>
       </details>
       <details>
-        <summary>Os balões murcham no meio da festa?</summary>
-        <p>Não. Os arcos e painéis são montados com balões de ar, tratados e fixados em estrutura própria — eles aguentam o dia inteiro e ainda ficam bonitos no dia seguinte. Só os balões de gás hélio (quando você pede) têm duração menor.</p>
+        <summary>Consigo fazer o tema que eu quiser?</summary>
+        <p>Sim. Trabalhamos com tema livre — é só mandar a referência que você viu no Instagram ou no Pinterest e adaptamos para o seu espaço e o seu orçamento.</p>
       </details>
       <details>
-        <summary>Vocês desmontam depois? Fica sujeira na minha casa?</summary>
-        <p>A gente volta depois da festa, desmonta tudo, recolhe estrutura e balão e leva embora. Você não precisa guardar nem descartar nada. Isso já está incluído no valor.</p>
+        <summary>Como funciona o pagamento?</summary>
+        <p>Reserva com sinal e o restante combinado antes do evento. Aceitamos Pix — e em campanhas promocionais o Pix tem desconto nos kits Básic e Start.</p>
       </details>
       <details>
-        <summary>Atende quais cidades? Cobra taxa de deslocamento?</summary>
-        <p>Atendemos <b data-cidade-faq>a cidade e a região</b>. Até um certo raio o deslocamento já está no valor; acima disso entra uma taxa que aparece no orçamento antes de você fechar — nunca como surpresa depois.</p>
+        <summary>Vocês fazem só balões?</summary>
+        <p>Não. Também fazemos arranjos florais e plantas, que podem ser combinados com a decoração de balões no mesmo projeto.</p>
       </details>
       <details>
-        <summary>Como reservo a data? Precisa de sinal?</summary>
-        <p>A data só fica reservada no seu nome depois do sinal. O restante você paga até o dia da festa. A gente combina tudo por escrito no WhatsApp, com o cenário aprovado e o valor fechado.</p>
-      </details>
-      <details>
-        <summary>Posso mandar uma foto do Pinterest como referência?</summary>
-        <p>Pode, e é o que a maioria faz. Manda o print, a gente adapta para o seu espaço e o seu orçamento e te devolve a proposta com as cores e o tamanho certos.</p>
+        <summary>Atendem empresa? Emitem nota fiscal?</summary>
+        <p>Sim. Fazemos inaugurações, confraternizações e ativações de marca, com a paleta da identidade da empresa e montagem fora do horário de expediente.</p>
       </details>
     </div>
   </div>
 </section>
 
 <!-- ============ cta final ============ -->
-<section class="secao secao--escura">
-  <div class="wrap fechamento">
-    <p class="olho" style="justify-content:center">Última coisa</p>
-    <h2>A sua data ainda está livre?</h2>
-    <p class="sub">Montamos um número limitado de festas por fim de semana para dar atenção a cada uma. Manda a data agora e a gente confirma na hora se dá para reservar.</p>
-    <div class="urgencia" data-exemplo><span class="pulso"></span> <span data-vagas>Restam poucas datas neste mês</span></div>
-    <div class="hero__acoes">
+<section class="secao" style="padding-top:0">
+  <div class="wrap">
+    <div class="fechamento">
+      <h2>Sua data ainda está livre?</h2>
+      <p>Chame agora no WhatsApp, diga o dia e o tema — respondemos com o catálogo e o valor. Sem compromisso.</p>
       <a class="btn btn--zap" data-zap href="#">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-2.6-.9-4.4-3.4-4.5-3.6-.2-.2-1.2-1.5-1.2-2.9 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 1.5 1 1.8 1.1.2 0 .4 0 .5-.1l.7-.9c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3v.5Z"/></svg>
-        Consultar minha data
+        Falar agora no WhatsApp
       </a>
-      <a class="btn btn--claro" data-insta href="#" target="_blank" rel="noopener">Ver o Instagram</a>
+      <p class="micro">WhatsApp <span data-tel-visivel></span> · Instagram <a class="destaque" data-insta href="#" target="_blank" rel="noopener"></a></p>
     </div>
   </div>
 </section>
@@ -799,69 +665,56 @@ body.publicado .chip{display:none}
   <div class="wrap">
     <div class="rodape__grade">
       <div>
-        <a class="marca" href="#topo" style="color:var(--sobre-escuro)">
-          <svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true">
-            <ellipse cx="10" cy="11" rx="8.4" ry="10" fill="#E8365D"/>
-            <ellipse cx="21" cy="14" rx="7.2" ry="8.6" fill="#FFB23F"/>
-            <path d="M10 21.5c1.8 4 .5 6.5-1.4 8.5M21 22.8c-1.4 3.4-.3 5.6 1.3 7.2" stroke="#2FB8A2" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-          </svg>
-          <span>Dini Balões<small>Decoração de festas</small></span>
-        </a>
-        <p style="margin-top:16px; max-width:34ch">Painéis, arcos e cenários completos. A gente monta, você aproveita a festa.</p>
+        <img src="img/logo.jpg" alt="Logo da Line Balões" width="56" height="56" style="width:56px;height:56px;border-radius:50%;object-fit:cover;margin-bottom:14px;border:2px solid rgba(255,255,255,.25)">
+        <h4 style="margin-bottom:8px">Line Balões</h4>
+        <p style="max-width:36ch">Design de balões, decoração de festas e arranjos florais. Jaguaré — São Paulo, SP.</p>
       </div>
       <div>
-        <h4>Navegar</h4>
+        <h4>Serviços</h4>
         <ul>
-          <li><a href="#como">Como funciona</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#pacotes">Pacotes</a></li>
-          <li><a href="#faq">Dúvidas</a></li>
+          <li>Decoração social</li>
+          <li>Decoração corporativa</li>
+          <li>Decoração domiciliar</li>
+          <li>Flores e plantas</li>
         </ul>
       </div>
       <div>
         <h4>Contato</h4>
         <ul>
           <li><a data-zap href="#">WhatsApp <span data-tel-visivel></span></a></li>
-          <li><a data-insta href="#" target="_blank" rel="noopener">Instagram <span data-insta-visivel></span></a></li>
-          <li data-area>Atendimento na cidade e região</li>
-          <li data-horario>Seg a sáb, 9h às 19h</li>
+          <li><a data-insta href="#" target="_blank" rel="noopener"></a></li>
+          <li>São Paulo capital e região</li>
         </ul>
       </div>
     </div>
     <div class="rodape__fim">
-      <span>© <span id="ano"></span> Dini Balões. Todos os direitos reservados.</span>
-      <span>Feito para converter no WhatsApp.</span>
+      <span>© <span id="ano"></span> Line Balões · Todos os direitos reservados.</span>
+      <span>Jaguaré — São Paulo, SP</span>
     </div>
   </div>
 </footer>
 
 <a class="zap-fixo" data-zap href="#" aria-label="Falar no WhatsApp">
-  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-2.6-.9-4.4-3.4-4.5-3.6-.2-.2-1.2-1.5-1.2-2.9 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 1.5 1 1.8 1.1.2 0 .4 0 .5-.1l.7-.9c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3v.5Z"/></svg>
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#04301A" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-2.6-.9-4.4-3.4-4.5-3.6-.2-.2-1.2-1.5-1.2-2.9 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 1.5 1 1.8 1.1.2 0 .4 0 .5-.1l.7-.9c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3v.5Z"/></svg>
 </a>
+
+<div class="fixo-mob">
+  <span>Agenda <span data-ano-agenda>2026</span> aberta<br>Orçamento sem compromisso</span>
+  <a class="btn btn--zap btn--p" data-zap href="#">WhatsApp</a>
+</div>
 
 <script>
 /* =====================================================================
    CONFIG — edite só daqui para baixo
    ===================================================================== */
 var CONFIG = {
-  WHATSAPP:      "5500000000000",          // DDI+DDD+número, só dígitos. Ex.: 5511999998888
-  MENSAGEM:      "Oi, Dini! Vim pelo site. Queria um orçamento de decoração.",
-  INSTAGRAM:     "linebaloes84",           // só o @ , sem a URL
-  CIDADE:        "Sua cidade e região",
-  PRAZO_RESPOSTA:"1 hora",
-  HORARIO:       "Seg a sáb, 9h às 19h",
+  WHATSAPP:      "5511991398526",                 // DDI+DDD+número, só dígitos
+  TELEFONE:      "(11) 99139-8526",               // como aparece escrito na página
+  MENSAGEM:      "Olá, Line Balões! Vim pelo site e quero um orçamento de decoração.",
+  INSTAGRAM:     "linebaloes84",                  // só o @, sem a URL
+  ANO_AGENDA:    "2026",
 
-  /* --- conteúdo de exemplo: confirmar com a cliente --- */
-  N_FESTAS: "+300",
-  N_ANOS:   "8",
-  N_NOTA:   "5,0",
-  VAGAS:    "Restam poucas datas neste mês",
-  PRECO_1:  "a partir de R$ 000",
-  PRECO_2:  "a partir de R$ 000",
-  PRECO_3:  "sob consulta",
-
-  /* deixe true só quando todo o conteúdo real estiver no ar */
+  /* deixe true quando a cliente aprovar os depoimentos */
   PUBLICADO: false
 };
 /* ===================================================================== */
@@ -877,35 +730,16 @@ var CONFIG = {
   });
 
   document.querySelectorAll("[data-insta]").forEach(function(el){
-    el.setAttribute("href","https://instagram.com/" + CONFIG.INSTAGRAM);
+    el.setAttribute("href","https://www.instagram.com/" + CONFIG.INSTAGRAM);
+    if(!el.textContent.trim()) el.textContent = "@" + CONFIG.INSTAGRAM;
   });
 
-  function set(sel, valor){
-    document.querySelectorAll(sel).forEach(function(el){ el.textContent = valor; });
-  }
-  set("[data-cidade]", CONFIG.CIDADE);
-  set("[data-cidade-hero]", CONFIG.CIDADE);
-  set("[data-cidade-faq]", CONFIG.CIDADE);
-  set("[data-prazo]", CONFIG.PRAZO_RESPOSTA);
-  set("[data-area]", "Atendimento em " + CONFIG.CIDADE);
-  set("[data-horario]", CONFIG.HORARIO);
-  set("[data-insta-visivel]", "@" + CONFIG.INSTAGRAM);
-  set("[data-n-festas]", CONFIG.N_FESTAS);
-  set("[data-n-anos]", CONFIG.N_ANOS);
-  set("[data-n-nota]", CONFIG.N_NOTA);
-  set("[data-n-prazo]", CONFIG.PRAZO_RESPOSTA.replace(" hora","h").replace(" horas","h"));
-  set("[data-vagas]", CONFIG.VAGAS);
-
-  function preco(sel, valor){
-    var el = document.querySelector(sel);
-    if(!el) return;
-    var small = el.querySelector("small");
-    el.textContent = valor;
-    if(small) el.appendChild(small);
-  }
-  preco("[data-preco-1]", CONFIG.PRECO_1);
-  preco("[data-preco-2]", CONFIG.PRECO_2);
-  preco("[data-preco-3]", CONFIG.PRECO_3);
+  document.querySelectorAll("[data-tel-visivel]").forEach(function(el){
+    el.textContent = CONFIG.TELEFONE;
+  });
+  document.querySelectorAll("[data-ano-agenda]").forEach(function(el){
+    el.textContent = CONFIG.ANO_AGENDA;
+  });
 
   document.getElementById("ano").textContent = new Date().getFullYear();
 
